@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Importar primero boostrap para que no pise mis estilos -->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Guido Facio</title>
+</head>
+<body>
+  
+  <header>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <!-- Titulo -->
+        <a class="navbar-brand titulo_nav_animacion" href="./index.html">Guido Facio</a>
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links del menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto lista_nav align-items-end">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/habilidadestecnicas.html">Habilidades Técnicas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/experienciaprofesional.html">Experiencia Profesional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">  
+    </section>
+
+    <section class="contenedor_sobre_mi">
+      <div> 
+        <img src="./recursos/foto.png" alt="fotografia"> 
+      </div>
+
+      <div class="contenido_sobre_mi">
+          <h1 class="titulo_sobre_mi">Sobre mí</h1>
+
+          <p>Soy estudiante de la carrera de Analista de Sistemas 📚 y actualmente me desempeño como Desarrollador .NET en DC SISTEMAS 💻.</p> 
+          <p>Mi objetivo es seguir integrando equipos de trabajo en el área IT, donde pueda potenciar mi aprendizaje en nuevos métodos y tecnologías, aportando compromiso y creatividad en cada proyecto.</p>
+          <p> Me motiva la posibilidad de crear y gestionar soluciones informáticas innovadoras 🚀 que respondan a las necesidades de los 
+            usuarios y contribuyan a la optimización de procesos.</p>
+      </div> 
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="contenedor_footer">
+       <a href="https://www.linkedin.com/in/guido-facio-informatica/"><img src="./recursos/linkedin.png" alt="Redireccion a Linkedin"> Click aquí para ver mi Linkedin</a>
+	     <p>© 2025 Guido Facio. Todos los derechos reservados.</p>
+       <a href="https://wa.me/1161300052"><img class="logoWP" src="./recursos/wzp.png"></a>  
+    </section>   
+  </footer>
+  
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
