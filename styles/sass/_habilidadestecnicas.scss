@@ -1,0 +1,61 @@
+// ==============================
+// VARIABLES
+// ==============================
+$size: 1rem;
+
+// ==============================
+// PÁGINA HABILIDADES
+// ==============================
+ 
+.contenedor_habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: $size * 4;
+
+    .titulo_habilidades{
+  text-align: center;
+  margin-bottom: 5px;
+  padding: $size * 2;
+  }
+
+  .titulo_habilidad {
+    text-align: center;
+    padding-top: $size;
+  }
+
+  .img_habilidades {
+    height: 300px;
+    width: 300px;
+    justify-self: center;
+  }
+
+  .habilidad-grid {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Imagen, título y descripción */
+    text-align: center;
+    gap: calc($size / 2); /* Espacio entre filas */
+    margin-bottom: $size * 2;
+
+    p {
+      font-size: $size;
+    }
+  }
+}
+
+
+// ==============================
+// MEDIA QUERY RESPONSIVE
+// ==============================
+@media (max-width: 768px) {
+
+  .contenedor_habilidades {
+    .img_habilidades {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  
+}

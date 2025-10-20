@@ -1,0 +1,58 @@
+// ==============================
+// VARIABLES
+// ==============================
+$color-boton: #007BFF;
+$color-fondo-form: #1a1a1a; 
+$size: 1rem;
+
+// ==============================
+// FUNCIONES
+// ==============================
+
+@mixin flexbox($direction: row, $justifycontent: null, $alignitems: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justifycontent != null {
+    justify-content: $justifycontent; /* alineacion horizontal del contenido del contenedor al centro*/ 
+  }
+
+  @if $alignitems != null {
+    align-items: $alignitems;    /* alineacion vertical del contenido del contenedor al centro*/
+  }
+}
+
+// ==============================
+// PÁGINA DE CONTACTO
+// ==============================
+
+.contenedor_principal {
+  @include flexbox(row, center, center);
+  height: 700px;          
+  padding: $size * 2;
+
+  section {
+    width: 100%;
+    max-width: 400px;
+    background-color: $color-fondo-form;
+    padding: $size * 2;
+    border-radius: $size;
+    text-align: center;
+     .form_item{
+        text-align: left;
+     }
+  }
+}
+
+.form_item {
+  @include flexbox(column, null, null);
+  margin-bottom: 15px;
+
+  button {
+    padding: 12px;
+    background-color: $color-boton;
+    color: white;
+    font-size: $size;
+  }
+}
+

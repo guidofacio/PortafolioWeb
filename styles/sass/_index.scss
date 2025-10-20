@@ -1,0 +1,91 @@
+
+// ==============================
+// VARIABLES
+// ==============================
+$size: 1rem;
+
+// ==============================
+// FUNCIONES
+// ==============================
+
+@mixin flexbox($direction: row, $justifycontent: null, $alignitems: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justifycontent != null {
+    justify-content: $justifycontent; /* alineacion horizontal del contenido del contenedor al centro*/ 
+  }
+
+  @if $alignitems != null {
+    align-items: $alignitems;    /* alineacion vertical del contenido del contenedor al centro*/
+  }
+}
+
+
+// ==============================
+// BANNER
+// ==============================
+.banner {
+  background-image: url('../recursos/banner.png');
+  height: 400px;
+  background-size: cover;
+}
+ 
+// ==============================
+// PÁGINA INDEX - SOBRE MÍ
+// ==============================
+.contenedor_sobre_mi {
+ /* En desktop 1 fila de 2 columnas por que son 2 divs */
+  @include flexbox(row, center,center);
+
+  text-align: center;
+  padding: $size * 2;
+
+  .titulo_sobre_mi{
+   padding-bottom: 2rem;
+  }
+
+  img {
+   width: 500px;  
+   height: 900px;
+   border-radius: 10%; /* Foto principal un poco circular para que no quede tan cuadrada/rigida */
+   padding-right: 10%;
+   padding-bottom: 10%;
+  } 
+
+ .contenido_sobre_mi {
+
+   @include flexbox(column, space-evenly, null);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: left;  
+   max-width: 600px;
+   font-size: $size * 1.5;
+  }
+
+}
+
+// ==============================
+// MEDIA QUERY RESPONSIVE
+// ==============================
+@media (max-width: 768px) {
+  .contenedor_sobre_mi {
+
+    /* Pasa a 1 columna */
+    @include flexbox(column, null, null);
+    text-align: center;
+
+    .contenido_sobre_mi {
+      text-align: center; /* Centrar textos en móvil */
+      width: 100%;
+      font-size: $size;
+     }
+  
+    img {
+      width: 400px;  /* achica tamaño de foto principal */
+      height: 700px;
+    }
+  }
+}
+

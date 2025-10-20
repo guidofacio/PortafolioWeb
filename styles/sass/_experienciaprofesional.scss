@@ -1,0 +1,41 @@
+
+// ==============================
+// VARIABLES
+// ==============================
+$size: 1rem;
+
+// ==============================
+// FUNCIONES
+// ==============================
+
+@mixin flexbox($direction: row, $justifycontent: null, $alignitems: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justifycontent != null {
+    justify-content: $justifycontent; /* alineacion horizontal del contenido del contenedor al centro*/ 
+  }
+ 
+  @if $alignitems != null {
+    align-items: $alignitems;    /* alineacion vertical del contenido del contenedor al centro*/
+  }
+}
+
+// ==============================
+// PÁGINA EXPERIENCIA PROFESIONAL
+// ==============================
+.contenedor_experiencias {
+  @include flexbox(column, null, center);
+  text-align: left;     
+  margin: $size;
+
+  .titulo_experiencias{
+    margin-bottom: $size * 2;
+  }
+
+  .titulo_experiencia{
+    text-align: center;
+    margin-bottom: $size * 2;
+  }
+}
+ 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importar primero boostrap para que no pise mis estilos -->
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Guido Facio</title>
+</head>
+<body>
+  <header>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <!-- Titulo -->
+        <a class="navbar-brand titulo_nav_animacion" href="./index.html">Guido Facio</a>
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links del menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto lista_nav align-items-end">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./habilidadestecnicas.html">Habilidades Técnicas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./experienciaprofesional.html">Experiencia Profesional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor_habilidades">
+    <h1 class="titulo_habilidades">Habilidades Técnicas</h1>
+
+    <div class="row">
+      <!--
+        col-12: en pantallas chicas agrupa los elementos en una sola columna.
+        col-md-6: en pantallas medianas agrupa los elementos en dos columnas.
+        col-lg-4: en pantallas grandes agrupa los elementos en 3 columnas.
+      -->
+        
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/html.png" class="img_habilidades" alt="HTML">
+        <h3 class="titulo_habilidad">HTML</h3>
+        <p>Lenguaje de marcado para estructurar páginas web.</p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/css.jpg" class="img_habilidades" alt="CSS">
+        <h3 class="titulo_habilidad">CSS</h3>
+        <p>Estilos y diseño visual para páginas web.</p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/js.png" class="img_habilidades" alt="JavaScript">
+        <h3 class="titulo_habilidad">JavaScript</h3>
+        <p>Lenguaje de programación para interactividad web.</p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/sql.jpg" class="img_habilidades" alt="SQL">
+        <h3 class="titulo_habilidad">SQL</h3>
+        <p>Gestión y consulta de bases de datos.</p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/csharp.png" class="img_habilidades" alt="C#">
+        <h3 class="titulo_habilidad">C#</h3>
+        <p>Lenguaje de programación orientado a objetos.</p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 habilidad-grid" data-aos="flip-left">
+        <img src="../recursos/ws.jpg" class="img_habilidades" alt="Windows Server">
+        <h3 class="titulo_habilidad">Windows Server</h3>
+        <p>Administración y configuración de servidores Windows.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <section class="contenedor_footer">
+       <a href="https://www.linkedin.com/in/guido-facio-informatica/"><img src="../recursos/linkedin.png" alt="Redireccion a Linkedin"> Click aquí para ver mi Linkedin</a>
+	    <p>© 2025 Guido Facio. Todos los derechos reservados.</p>
+       <a href="https://wa.me/1161300052"><img class="logoWP" src="../recursos/wzp.png"></a>  
+    </section>   
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   AOS.init();
+  </script>
+  
+</body>
+</html>

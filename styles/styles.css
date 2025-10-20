@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MiFuente";
+  src: url("../fuentes/Merriweather_24pt-BoldItalic.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MiFuente";
+  color: #B6B09F;
+  background-color: #000;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header nav.navbar {
+  background-color: #000;
+}
+header nav.navbar .navbar-brand.titulo_nav_animacion {
+  animation: cambioColor 0.8s infinite alternate;
+}
+header nav.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+}
+header nav.navbar .navbar-nav .nav-item {
+  padding: 10px;
+}
+header nav.navbar .navbar-nav .nav-item .nav-link {
+  color: #B6B09F;
+  text-decoration: none;
+}
+header nav.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+
+.logoWP {
+  position: fixed;
+  height: 55px;
+  width: 55px;
+  right: 30px;
+  bottom: 60px;
+}
+
+@keyframes cambioColor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #B6B09F;
+  }
+}
+.footer {
+  margin-top: 5%;
+  height: 150px;
+}
+.footer .contenedor_footer {
+  background-image: url("../recursos/footer.png");
+  background-repeat: repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* alineacion horizontal del contenido del contenedor al centro*/
+  align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+}
+
+.banner {
+  background-image: url("../recursos/banner.png");
+  height: 400px;
+  background-size: cover;
+}
+
+.contenedor_sobre_mi {
+  /* En desktop 1 fila de 2 columnas por que son 2 divs */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
+  align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+  text-align: center;
+  padding: 2rem;
+}
+.contenedor_sobre_mi .titulo_sobre_mi {
+  padding-bottom: 2rem;
+}
+.contenedor_sobre_mi img {
+  width: 500px;
+  height: 900px;
+  border-radius: 10%; /* Foto principal un poco circular para que no quede tan cuadrada/rigida */
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+.contenedor_sobre_mi .contenido_sobre_mi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* alineacion horizontal del contenido del contenedor al centro*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  max-width: 600px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contenedor_sobre_mi {
+    /* Pasa a 1 columna */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .contenedor_sobre_mi .contenido_sobre_mi {
+    text-align: center; /* Centrar textos en móvil */
+    width: 100%;
+    font-size: 1rem;
+  }
+  .contenedor_sobre_mi img {
+    width: 400px; /* achica tamaño de foto principal */
+    height: 700px;
+  }
+}
+.contenedor_habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+.contenedor_habilidades .titulo_habilidades {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 2rem;
+}
+.contenedor_habilidades .titulo_habilidad {
+  text-align: center;
+  padding-top: 1rem;
+}
+.contenedor_habilidades .img_habilidades {
+  height: 300px;
+  width: 300px;
+  justify-self: center;
+}
+.contenedor_habilidades .habilidad-grid {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Imagen, título y descripción */
+  text-align: center;
+  gap: 0.5rem; /* Espacio entre filas */
+  margin-bottom: 2rem;
+}
+.contenedor_habilidades .habilidad-grid p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contenedor_habilidades .img_habilidades {
+    height: 200px;
+    width: 200px;
+  }
+}
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+  text-align: left;
+  margin: 1rem;
+}
+.contenedor_experiencias .titulo_experiencias {
+  margin-bottom: 2rem;
+}
+.contenedor_experiencias .titulo_experiencia {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contenedor_principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
+  align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+  height: 700px;
+  padding: 2rem;
+}
+.contenedor_principal section {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.contenedor_principal section .form_item {
+  text-align: left;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form_item button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

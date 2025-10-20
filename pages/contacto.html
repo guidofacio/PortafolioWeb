@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Importar primero boostrap para que no pise mis estilos -->
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>Guido Facio</title>
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <!-- Titulo -->
+        <a class="navbar-brand titulo_nav_animacion" href="../index.html">Guido Facio</a>
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links del menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto lista_nav align-items-end">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./habilidadestecnicas.html">Habilidades Técnicas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./experienciaprofesional.html">Experiencia Profesional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor_principal">
+    <section>
+      <h1 class="titulo_contacto">Contacto</h1>
+      <form action="enviar.php" method="post">
+        
+        <div class="form_item">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form_item">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" required>
+        </div>
+
+        <div class="form_item">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form_item">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <div class="form_item">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  
+  <footer class="footer">
+    <section class="contenedor_footer">
+       <a href="https://www.linkedin.com/in/guido-facio-informatica/"><img src="../recursos/linkedin.png" alt="Redireccion a Linkedin"> Click aquí para ver mi Linkedin</a>
+	    <p>© 2025 Guido Facio. Todos los derechos reservados.</p>
+       <a href="https://wa.me/1161300052"><img class="logoWP" src="../recursos/wzp.png"></a>  
+    </section>   
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

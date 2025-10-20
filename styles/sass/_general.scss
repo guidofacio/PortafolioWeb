@@ -1,0 +1,125 @@
+// ==============================
+// VARIABLES
+// ==============================
+$color-fondo: #000;
+$color-texto: #B6B09F;
+$color-blanco: #fff;
+
+// ==============================
+// FUNCIONES
+// ==============================
+
+@mixin flexbox($direction: row, $justifycontent: null, $alignitems: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justifycontent != null {
+    justify-content: $justifycontent; /* alineacion horizontal del contenido del contenedor al centro*/ 
+  }
+
+  @if $alignitems != null {
+    align-items: $alignitems;    /* alineacion vertical del contenido del contenedor al centro*/
+  }
+}
+
+// ==============================
+// FUENTE
+// ==============================
+@font-face {
+  font-family: 'MiFuente';
+  src: url('../fuentes/Merriweather_24pt-BoldItalic.ttf');
+}
+ 
+// ==============================
+// RESETEO
+// ==============================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ==============================
+// ESTILO GENERAL BODY
+// ==============================
+body {
+  font-family: 'MiFuente';
+  color: $color-texto;
+  background-color: $color-fondo;
+}
+
+// ==============================
+// HEADER Y NAVBAR
+// ==============================
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  nav.navbar {
+    background-color: $color-fondo;
+
+    .navbar-brand {
+      &.titulo_nav_animacion {
+        animation: cambioColor 0.8s infinite alternate;
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: center;
+
+      .nav-item {
+        padding: 10px;
+
+        .nav-link {
+          color: $color-texto;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-blanco;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ==============================
+// LOGO WHATSAPP
+// ==============================
+.logoWP {
+  position: fixed;
+  height: 55px;
+  width: 55px;
+  right: 30px;
+  bottom: 60px;
+}
+
+
+// ==============================
+// ANIMACIONES
+// ==============================
+@keyframes cambioColor {
+  0% {
+    color: $color-blanco;
+  }
+  100% {
+    color: $color-texto;
+  }
+}
+
+// ==============================
+// FOOTER
+// ==============================
+.footer {
+  margin-top: 5%;
+  height: 150px;
+
+  .contenedor_footer {
+    background-image: url('../recursos/footer.png');
+    background-repeat: repeat;
+    height: 100%;
+    @include flexbox(column, space-around, center);
+  }
+}

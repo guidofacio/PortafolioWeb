@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'MiFuente';
+  src: url('../fuentes/Merriweather_24pt-BoldItalic.ttf');
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     font-family: 'MiFuente';
+     color: #B6B09F;
+     background-color: #000000;
+}
+
+header{
+  position: sticky;
+  top: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul li {
+  padding: 10px ;
+}
+
+a {
+  color: #B6B09F;
+  text-decoration: none;
+}
+
+.banner{
+  background-image: url('../recursos/banner.png');
+  height: 400px;
+  background-size: cover;
+}
+
+.logoWP{
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+}
+
+/* SOBRE MI */
+
+.sobre_mi {
+  display: flex;
+  flex-direction: row;   /* En desktop 1 fila de 2 columnas por que son 2 divs */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.titulo_sobre_mi
+{
+  padding-bottom: 10% ;
+}
+
+.sobre_mi img {
+  width: 450px;  
+  height: 800px;
+  border-radius: 10%; /* Foto principal un poco circular para que no quede tan cuadrada/rigida */
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+
+.contenido_sobre_mi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;  
+  max-width: 600px;
+}
+
+/* animacion */
+.titulo_nav_animacion {
+  animation: cambioColor 0.8s infinite alternate;
+}
+
+@keyframes cambioColor {
+  0% {
+    color: white; 
+  }
+  
+  100% {
+    color: #B6B09F;
+  }
+}
+
+/* HABILIDADES*/
+.contenedor_habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     
+  text-align: center;     
+}
+
+
+.titulo_habilidad{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.img_habilidades {
+  height: 300px;
+  width: 300px;
+  justify-self: center;
+}
+
+.habilidad-grid {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Imagen, título y descripción */
+  text-align: center;
+  gap: 0.5rem; /* Espacio entre filas */
+}
+
+.habilidad-grid p {
+  font-size: 0.9rem;
+}
+
+/* EXPERIENCIA PROFESIONAL*/
+
+.contenedor_experiencia {
+  display: flex;
+  flex-direction: column;
+  text-align: left;     
+  align-items: center;
+  margin: 1rem;
+}
+
+.titulo_habilidades{
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 2rem;
+}
+
+
+/* FORMULARIO CONTACTO*/
+
+.contenedor_principal {
+  display: flex;             
+  justify-content: center;   /* alineacion horizontal del contenido del contenedor al centro*/ 
+  align-items: center;       /* alineacion vertical del contenido del contenedor al centr*/
+  height: 700px;          
+  padding: 20px;
+}
+
+.contenedor_principal section {
+  width: 350px; 
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form_item button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+}
+
+/*FOOTER COMUN A TODAS LAS PAGINAS*/
+
+.contenedor_footer {
+  background-image: url('../recursos/footer.png');
+  background-repeat: repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer {
+  margin-top: 5%;
+  height: 150px;
+}
+
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .sobre_mi {
+    flex-direction: column; /* Pasa a 1 columna */
+    text-align: center;
+  }
+
+  .contenido_sobre_mi {
+    text-align: center; /* Centrar textos en móvil */
+    width: 100%;
+  }
+
+  .img_habilidades {
+  height: 200px;
+  width: 200px;
+  }
+  .sobre_mi img {
+  width: 400px;  /* achica tamaño de foto principal */
+  height: 700px;
+  }
+
+  
+}
