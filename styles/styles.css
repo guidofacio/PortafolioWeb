@@ -185,7 +185,7 @@ header nav.navbar .navbar-nav .nav-item .nav-link:hover {
   justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
   align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
   height: 700px;
-  padding: 2rem;
+  padding: 2rem; 
 }
 .contenedor_principal section {
   width: 100%;
