@@ -59,3 +59,24 @@ $size: 1rem;
   }
   
 }
+
+// ==============================
+// MEDIA QUERY - TABLET
+// ==============================
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_habilidades {
+    padding: $size * 3;
+
+    .img_habilidades {
+      height: 250px;
+      width: 250px;
+    }
+
+    .habilidad-grid {
+      gap: $size;
+      p {
+        font-size: $size * 0.9;
+      }
+    }
+  }
+}

@@ -30,6 +30,7 @@ $size: 1rem;
   margin: $size;
 
   .titulo_experiencias{
+    font-size: $size * 2;
     margin-bottom: $size * 2;
   }
 
@@ -38,4 +39,60 @@ $size: 1rem;
     margin-bottom: $size * 2;
   }
 }
- 
+
+// ==============================
+// MEDIA QUERY RESPONSIVE
+// ==============================
+  @media (max-width: 768px) {
+    .contenedor_experiencias {
+      @include flexbox(column, center, center);
+      margin: calc($size / 2);
+
+      .titulo_experiencias {
+        font-size: 1.5rem;
+        margin-bottom: $size;
+      }
+    
+      .titulo_experiencia {
+        font-size: 1.2rem;
+        margin-bottom: $size;
+      }
+
+      h3{
+          font-size: 1rem;
+      }
+
+       p{
+          font-size: 0.9rem;
+      }
+    }
+  }
+
+// ==============================
+// MEDIA QUERY TABLET
+// ==============================
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_experiencias {
+    @include flexbox(column, center, center);
+    margin: $size * 1.5;
+
+    .titulo_experiencias {
+      font-size: $size * 1.8;
+      margin-bottom: $size * 1.5;
+    }
+
+    .titulo_experiencia {
+      font-size: $size * 1.4;
+      margin-bottom: $size * 1.5;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 90%; // para que el texto no quede tan ancho
+    }
+  }
+}

@@ -87,5 +87,39 @@ $size: 1rem;
       height: 700px;
     }
   }
+
+    .banner {
+    height: 200px; // reduce un poco el alto del banner para tablets
+    background-position: center;
+  }
+}
+
+// ==============================
+// MEDIA QUERY - TABLET
+// ==============================
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_sobre_mi {
+    @include flexbox(row, center, center); // sigue siendo en fila, pero con ajustes
+    padding: $size * 1.5;
+    text-align: center;
+
+    img {
+      width: 350px;
+      height: 600px;
+      padding-right: 5%;
+      padding-bottom: 5%;
+    }
+
+    .contenido_sobre_mi {
+      font-size: $size * 1.2;
+      max-width: 500px;
+      text-align: left;
+    }
+  }
+
+  .banner {
+    height: 300px; // reduce un poco el alto del banner para tablets
+    background-position: center;
+  }
 }
 

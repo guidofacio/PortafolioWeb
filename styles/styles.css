@@ -124,6 +124,35 @@ header nav.navbar .navbar-nav .nav-item .nav-link:hover {
     width: 400px; /* achica tamaño de foto principal */
     height: 700px;
   }
+  .banner {
+    height: 200px;
+    background-position: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_sobre_mi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
+    align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .contenedor_sobre_mi img {
+    width: 350px;
+    height: 600px;
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }
+  .contenedor_sobre_mi .contenido_sobre_mi {
+    font-size: 1.2rem;
+    max-width: 500px;
+    text-align: left;
+  }
+  .banner {
+    height: 300px;
+    background-position: center;
+  }
 }
 .contenedor_habilidades {
   display: flex;
@@ -164,6 +193,21 @@ header nav.navbar .navbar-nav .nav-item .nav-link:hover {
     width: 200px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_habilidades {
+    padding: 3rem;
+  }
+  .contenedor_habilidades .img_habilidades {
+    height: 250px;
+    width: 250px;
+  }
+  .contenedor_habilidades .habilidad-grid {
+    gap: 1rem;
+  }
+  .contenedor_habilidades .habilidad-grid p {
+    font-size: 0.9rem;
+  }
+}
 .contenedor_experiencias {
   display: flex;
   flex-direction: column;
@@ -172,6 +216,7 @@ header nav.navbar .navbar-nav .nav-item .nav-link:hover {
   margin: 1rem;
 }
 .contenedor_experiencias .titulo_experiencias {
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 .contenedor_experiencias .titulo_experiencia {
@@ -179,36 +224,119 @@ header nav.navbar .navbar-nav .nav-item .nav-link:hover {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .contenedor_experiencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
+    align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+    margin: 0.5rem;
+  }
+  .contenedor_experiencias .titulo_experiencias {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .contenedor_experiencias .titulo_experiencia {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .contenedor_experiencias h3 {
+    font-size: 1rem;
+  }
+  .contenedor_experiencias p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_experiencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
+    align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
+    margin: 1.5rem;
+  }
+  .contenedor_experiencias .titulo_experiencias {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .contenedor_experiencias .titulo_experiencia {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .contenedor_experiencias h3 {
+    font-size: 1.2rem;
+  }
+  .contenedor_experiencias p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
 .contenedor_principal {
   display: flex;
   flex-direction: row;
   justify-content: center; /* alineacion horizontal del contenido del contenedor al centro*/
   align-items: center; /* alineacion vertical del contenido del contenedor al centro*/
   height: 700px;
-  padding: 2rem; 
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .contenedor_principal section {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #1a1a1a;
   padding: 2rem;
-  border-radius: 1rem;
   text-align: center;
 }
 .contenedor_principal section .form_item {
   text-align: left;
-}
-
-.form_item {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
-.form_item button {
+.contenedor_principal section .form_item button {
   padding: 12px;
   background-color: #007BFF;
   color: white;
   font-size: 1rem;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .contenedor_principal {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 90%;
+  }
+  .contenedor_principal section {
+    padding: 1rem;
+  }
+  .contenedor_principal section .form_item {
+    margin-bottom: 10px;
+  }
+  .contenedor_principal section .form_item button {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor_principal {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 50%;
+  }
+  .contenedor_principal section {
+    padding: 1.5rem;
+  }
+  .contenedor_principal section .form_item {
+    margin-bottom: 12px;
+  }
+  .contenedor_principal section .form_item button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

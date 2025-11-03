@@ -28,31 +28,80 @@ $size: 1rem;
 
 .contenedor_principal {
   @include flexbox(row, center, center);
-  height: 700px;          
+  height: 700px;
   padding: $size * 2;
+  gap: $size * 2; // espacio entre secciones
+  max-width: 1200px;
+  margin: 0 auto;
 
   section {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     background-color: $color-fondo-form;
     padding: $size * 2;
-    border-radius: $size;
     text-align: center;
-     .form_item{
-        text-align: left;
-     }
+
+    .form_item {
+      text-align: left;
+      @include flexbox(column, null, null);
+      margin-bottom: 15px;
+
+      button {
+        padding: 12px;
+        background-color: $color-boton;
+        color: white;
+        font-size: $size;
+        border: none;
+      }
+    }
   }
 }
 
-.form_item {
-  @include flexbox(column, null, null);
-  margin-bottom: 15px;
+// ==============================
+// MEDIA QUERY RESPONSIVE
+// ==============================
+@media (max-width: 767px) {
+  .contenedor_principal {
+    flex-direction: column; // Para que las secciones se apilen
+    padding: $size;
+    gap: $size;
+    max-width: 90%;
 
-  button {
-    padding: 12px;
-    background-color: $color-boton;
-    color: white;
-    font-size: $size;
+    section {
+      padding: $size;
+
+      .form_item {
+        margin-bottom: 10px;
+
+        button {
+          padding: 8px;
+          font-size: 0.8rem;
+        }
+      }
+    }
   }
 }
 
+// ==============================
+// MEDIA QUERY TABLET
+// ==============================
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor_principal {
+    padding: $size * 1.5;
+    gap: $size * 1.5;
+    max-width: 50%;
+
+    section {
+      padding: $size * 1.5;
+
+      .form_item {
+        margin-bottom: 12px;
+
+        button {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
